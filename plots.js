@@ -17,6 +17,8 @@ function buildMetadata(sample) {
 
   });
 }
+
+
 // Init function which is used to create initial page once index.html run
 // Init funtion call buildMeta function to create Demographic Info panel
 function init() {
@@ -35,6 +37,11 @@ function init() {
     var firstSample = sampleNames[0];
     buildMetadata(firstSample);
   });
+}
+
+function optionChanged(newSample) {
+  // Fetch new data each time a new sample is selected
+  buildMetadata(newSample);
 }
 
 init();
