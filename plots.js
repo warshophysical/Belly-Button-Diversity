@@ -93,7 +93,9 @@ function init() {
 
     var firstSample = sampleNames[0];
     buildMetadata(firstSample);
+    buildGauge(firstSample)
     buildCharts(newSample);
+
   });
 }
 
@@ -101,6 +103,7 @@ function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
   buildCharts(newSample);
+  buildGauge(newSample)
 }
 
 init();
